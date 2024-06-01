@@ -24,6 +24,37 @@ public class CajeroAutomatico {
             System.out.println(menu);
             opcion = teclado.nextInt();
 
+            switch(opcion){
+                case 1:
+                    System.out.println("El saldo actualizado es :"+saldo+"$");
+                    break;
+                case 2:
+                    System.out.println("¿Cual es el monto que desea retirar");
+                    double valorARetirar= teclado.nextDouble();
+                    if (saldo < valorARetirar) {
+                        System.out.println("Saldo insuficiente");
+                    }
+                    else{
+                        saldo = saldo - valorARetirar;
+                        System.out.println("El saldo actualizado es: "+saldo);
+                        }
+                    break;
+                case 3:
+                    System.out.println("Cual es el monto que desea depositar");
+                    double valorADepositar = teclado.nextDouble();
+                    saldo += valorADepositar;
+                    System.out.println("El saldo actualizado es: "+saldo);
+                    break;
+                case 9:
+                    System.out.println("Saliendo del programa, gracias por utilizar nuestros servicios bancarios");
+                    break;
+                default:
+                    System.out.println("Opcion invalida");
+
+
+
+            }
+
         }
 
     }
