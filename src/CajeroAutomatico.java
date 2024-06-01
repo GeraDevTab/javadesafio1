@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class CajeroAutomatico {
     public static void main(String[] args) {
         String nombre = "Tony Stark";
@@ -8,6 +9,22 @@ public class CajeroAutomatico {
         System.out.println("\nNombre del cliente: "+ nombre);
         System.out.println("El tipo de cuenta es: "+tipoDeCuenta);
         System.out.println("Su saldo disponible es: "+saldo + "$");
+        System.out.println("\n***********************************");
+
+        String menu = """
+                *** Escriba el numero de la opcion deseada ***
+                1 - Consultar el saldo
+                2 - retirar
+                3 - Depositar
+                9 - Salir
+                """;
+        int opcion= 0;
+        Scanner teclado = new Scanner(System.in);
+        while (opcion != 9){
+            System.out.println(menu);
+            opcion = teclado.nextInt();
+
+        }
 
     }
 }
